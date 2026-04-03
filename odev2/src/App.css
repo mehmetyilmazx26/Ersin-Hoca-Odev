@@ -1,0 +1,99 @@
+/* Ana Container */
+.product-card {
+  background: #121212;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  border: 1px solid #222;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
+/* Hover Efektleri */
+.in-stock:hover {
+  transform: translateY(-10px);
+  border-color: #00ff41;
+  box-shadow: 0 15px 30px rgba(0, 255, 65, 0.1);
+}
+
+/* Header Bölümü */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-tag {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sold-out-badge {
+  background: #ff4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Gövde Bölümü */
+.product-title {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 1.6rem;
+}
+
+.price-container {
+  color: #00ff41;
+  font-weight: 800;
+}
+
+.currency { font-size: 1.2rem; margin-right: 4px; }
+.amount { font-size: 2.2rem; }
+
+/* Stok Göstergesi */
+.stock-counter {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  background: #00ff41;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 255, 65, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
+}
+
+/* Stok Yokken Kartın Hali */
+.out-of-stock {
+  border-color: #333;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+.notify-btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}

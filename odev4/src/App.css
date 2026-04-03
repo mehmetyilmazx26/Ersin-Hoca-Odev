@@ -1,0 +1,141 @@
+:root {
+  --accent: #6366f1;
+  --bg: #0f172a;
+  --panel: rgba(30, 41, 59, 0.7);
+  --error: #ef4444;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background: var(--panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+input {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid #334155;
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.error-alert {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-loading { opacity: 0.7; cursor: not-allowed; }
+
+.btn-link {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.status-card {
+  text-align: center;
+  background: var(--panel);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid #10b981;
+}
+
+.check-icon {
+  width: 60px;
+  height: 60px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+}
